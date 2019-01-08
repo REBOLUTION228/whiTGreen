@@ -305,12 +305,14 @@ atom/proc/falling_check_obstruction_as_gangway(var/turf/simulated/open_space/Spa
 			return
 		else
 			var/damage = 10
-//			src.apply_damage(rand(0,damage), BRUTE, "groin") // Õ¿ Õ¿’”… œŒ √–Œ»Õ”
-			src.apply_damage(rand(0,damage), BRUTE, "l_leg")
-			src.apply_damage(rand(0,damage), BRUTE, "r_leg")
-			src.apply_damage(rand(2,damage), BRUTE, "l_foot")
-			src.apply_damage(rand(2,damage), BRUTE, "r_foot")
-			src.Weaken(3)
+			src.apply_damage(rand(200,damage), BRUTE, "groin")
+			src.apply_damage(rand(200,damage), BRUTE, "head")
+			src.apply_damage(rand(200,damage), BRUTE, "chest")
+			src.apply_damage(rand(200,damage), BRUTE, "l_leg")
+			src.apply_damage(rand(200,damage), BRUTE, "r_leg")
+			src.apply_damage(rand(200,damage), BRUTE, "l_foot")
+			src.apply_damage(rand(200,damage), BRUTE, "r_foot")
+			src.Weaken(100)
 			src:updatehealth()
 
 /obj/structure/piano/falling_do(var/turf/simulated/open_space/Space, var/inctruction)
